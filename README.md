@@ -1,8 +1,8 @@
 # 🎬 The Movie Recommendation Engine
 
-An intelligent movie recommendation system that helps you discover films tailored to your taste.
-
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://movierecommender-6bjrp6ri4qgbjcrzrxiymw.streamlit.app/)
+
+An intelligent movie recommendation system that helps you discover films tailored to your taste.
 
 🌐 **[Try Live Demo →](https://movierecommender-6bjrp6ri4qgbjcrzrxiymw.streamlit.app/)** 
 
