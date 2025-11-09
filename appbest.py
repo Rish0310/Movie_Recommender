@@ -1,6 +1,8 @@
 import pandas as pd
 import joblib
 import streamlit as st
+import os
+from dotenv import load_dotenv
 
 st.set_page_config(
     page_title='The Movie Recommendation Engine',
@@ -21,8 +23,11 @@ def load_models(file_path):
     tfv = joblib.load(file_path + '/tfidf_vectorizer.pkl')
     return sig, tfv
 
-data, dataframe = load_data('.') 
-sig, tfv = load_models('.')
+load_dotenv()
+data_path = os.getenv('DATA_PATH', '.') 
+
+data, dataframe = load_data(data_path)
+sig, tfv = load_models(data_path)
 
 def give_recommendations(movie_title, model, data, dataframe):
     """Tell us what you love, we'll find your next obsession!"""
@@ -291,3 +296,4 @@ st.markdown("""
     </div>
 
 """, unsafe_allow_html=True)
+
