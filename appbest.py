@@ -21,8 +21,8 @@ def load_models(file_path):
     tfv = joblib.load(file_path + '/tfidf_vectorizer.pkl')
     return sig, tfv
 
-data, dataframe = load_data('C:/dumped_movie_recc_obj')
-sig, tfv = load_models('C:/dumped_movie_recc_obj')
+data, dataframe = load_data('.') 
+sig, tfv = load_models('.')
 
 def give_recommendations(movie_title, model, data, dataframe):
     """Tell us what you love, we'll find your next obsession!"""
@@ -289,4 +289,5 @@ st.markdown("""
             to analyze movie features and find the most similar movies to your selection.
         </p>
     </div>
+
 """, unsafe_allow_html=True)
